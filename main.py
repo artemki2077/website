@@ -6,11 +6,12 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'nickname': 'Михаил'}  # выдуманный пользователь
+    user = {'nickname': 'Artemkrut'}  # выдуманный пользователь
     return render_template("index.html",
                            title='Home',
-                           user=user)
+                           user=user,
+                           range=range)
 
 
 if __name__ == '__main__':
-    app.run(port=5555)
+    app.run(port=5555, debug=True)
